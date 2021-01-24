@@ -1,0 +1,350 @@
+Gui, show, center h520 w800,
+Gui, Font, S40 C000000 Bold, CURSIVE
+Gui, add, text, x230 y10 w900 h100 , Vasquez AHK.
+Gui, Font, S10 C000000 Bold, CURSIVE
+
+Gui, Add, Text, x0 y99 w1300 h20 , ____________________________________________________________________________________________________________________________
+Gui, Font, S45 C000000 , CURSIVE
+Gui, Font, S12, 
+
+Gui, Add, Text, x2 y130 w280 h20 , Показать удостоверение.
+Gui, Add, Text, x2 y155 w280 h20 , Закрыть удостовирение.
+Gui, Add, Text, x2 y180 w280 h20 , Открыть окно.
+Gui, Add, Text, x2 y205 w280 h20 , Закрыть окно.
+Gui, Add, Text, x2 y230 w280 h20 , Пропустить спец.транспорт.1111
+Gui, Add, Text, x2 y255 w280 h20 , Тревожная кнопка.
+Gui, Add, Text, x2 y280 w280 h18 , Честь имею.
+Gui, Add, Text, x2 y305 w280 h20 , Помощь в поимки ООП.
+Gui, Add, Text, x2 y330 w280 h20 ,   
+Gui, Add, Text, x2 y355 w280 h20 ,  
+Gui, Add, Text, x2 y380 w280 h20 ,  
+Gui, Add, Text, x2 y405 w280 h20 ,  
+Gui, Add, Text, x2 y430 w280 h20 ,  
+
+Gui, Add, Text, x420 y130 w200 h18 , ПП при обмороках.
+Gui, Add, Text, x420 y155 w200 h18 , ПП при ДТП.
+Gui, Add, Text, x420 y180 w200 h20 , Работа с устройством КПК
+Gui, Add, Text, x420 y205 w200 h20 , Использование табельного оружия
+Gui, Add, Text, x420 y230 w210 h20 ,  
+Gui, Add, Text, x420 y255 w200 h20 ,  
+Gui, Add, Text, x420 y280 w200 h20 ,  
+Gui, Add, Text, x420 y330 w200 h20 ,  
+Gui, Add, Text, x420 y355 w200 h20 ,  
+Gui, Add, Text, x420 y380 w200 h20 ,  
+Gui, Add, Text, x420 y405 w200 h20 , 
+Gui, Add, Text, x420 y430 w200 h20 ,  
+Gui, Add, Text, x420 y455 w200 h20 ,  
+
+Gui, Font, S12 CDefault Bold, Verdana
+Gui, Add, Text, x292 y130 w105 h20 , Alt+1
+Gui, Add, Text, x292 y155 w105 h20 , Alt+2
+Gui, Add, Text, x292 y180 w105 h20 , Alt+3
+Gui, Add, Text, x292 y205 w105 h20 , Alt+4
+Gui, Add, Text, x292 y230 w105 h20 , Alt+5
+Gui, Add, Text, x292 y255 w105 h20 , Alt+insert
+Gui, Add, Text, x292 y280 w105 h20 , Alt+6
+Gui, Add, Text, x292 y305 w105 h20 , Alt+9
+Gui, Add, Text, x292 y330 w105 h20 , 
+Gui, Add, Text, x292 y355 w105 h20 , 
+Gui, Add, Text, x292 y380 w105 h20 ,   
+Gui, Add, Text, x292 y405 w105 h20 ,  
+Gui, Add, Text, x292 y430 w105 h20 ,  
+
+Gui, Add, Text, x700 y130 w105 h20 ,  Numpad1
+Gui, Add, Text, x700 y155 w105 h20 ,  Numpad2
+Gui, Add, Text, x700 y180 w105 h20 ,  Numpad3
+Gui, Add, Text, x700 y205 w105 h20 ,  Numpad4
+Gui, Add, Text, x700 y230 w105 h20 ,  
+Gui, Add, Text, x700 y255 w105 h20 ,  
+Gui, Add, Text, x700 y280 w105 h20 ,   
+Gui, Add, Text, x700 y305 w105 h20 ,  
+Gui, Add, Text, x700 y330 w105 h20 ,  
+Gui, Add, Text, x700 y355 w105 h20 ,  
+Gui, Add, Text, x700 y380 w105 h20 ,  
+Gui, Add, Text, x700 y405 w105 h20 ,  
+Gui, Add, Text, x700 y430 w105 h20 ,  
+Gui, Add, Text, x700 y455 w105 h20 ,  
+Gui, Add, Text, x0 y469 w1300 h20 , _______________________________________________________________________________________
+Gui, Font, S9 Bold Italic, 
+Gui, Add, Text, x2 y488 w250 h30 , *Включите NumPad, чтобы Бинд работал! *
+Gui, Add, Text, x660 y494 w250 h30 , By Vasquez
+Gui, Font, S9
+
+
+!1::
+SendMessage, 0x50,, 0x4190419,, A 
+SendInput, {t}
+Sleep 550 ;
+SendInput, /me достал удостоверение из нагрудного кармана и предъявил его в развёрнутом виде {Enter}
+Sleep 550 ;
+SendInput, {t} 
+Sleep 550 ;
+SendInput, /do 411-03-78 | Заместитель начальника Специализированной роты по отделу ДПС ОГИБДД Невский | Подполковник | Васкез Диего Айол. {ENTER}
+return
+
+!2::
+SendMessage, 0x50,, 0x4190419,, A 
+SendInput, {t}
+Sleep 100 ;
+SendInput, /me  закрыв удостоверение, убрал его обратно в нагрудной карман {Enter}
+return
+
+!3::
+SendMessage, 0x50,, 0x4190419,, A 
+SendInput, {t} 
+Sleep 150 ;
+SendInput, /me открыл окно автомобиля{ENTER}
+SendInput, {t}
+Sleep 150 ;
+SendInput, /do Окно открыто. {Enter}
+Return
+
+!4::
+SendMessage, 0x50,, 0x4190419,, A 
+SendInput, {t} 
+Sleep 150 ;
+SendInput, /do Окно авто закрыто. {ENTER}
+Return
+
+!5::
+SendMessage, 0x50,, 0x4190419,, A 
+SendInput, {t} 
+Sleep 550 ;
+SendInput, /me взял пульт СГУ с приборной панели, после чего поднёс его ко рту {ENTER}
+SendInput, {t} 
+Sleep 550 ;
+SendInput, /s Водитель, прижмитесь к обочине, пропустите спец.транспорт! {ENTER}
+return
+
+!6::
+SendMessage, 0x50,, 0x4190419,, A
+SendInput, {t} 
+sleep 650
+SendInput, /animarmy 3 {enter}
+SendInput, {t} 
+sleep 650
+SendInput, Честь имею,впредь больше не нарушайте! {enter}
+Return
+
+!7::
+SendMessage, 0x50,, 0x4190419,, A 
+SendInput, {t} 
+Sleep 750 ;
+SendInput, Здравствуйте, я прочту Вам лекцию на тему "ПП при обмороках". {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, Обмороки сопровождаются кратковременной потерей сознания,.. {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, вызванная недостаточным снабжением мозга кровью. {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, Обморок могут вызвать резкая боль, эмоциональный стресс. {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, Бессознательному состоянию обычно предшествует резкое ухудшение самочувствия: {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, нарастает слабость, появляются тошнота, головокружение, шум или звон в ушах. {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, Затем человек бледнеет, покрывается холодным потом... {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, и внезапно теряет сознание. {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, Первая помощь должна быть направлена на улучшение кровоснабжения мозга... {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, и обеспечение свободного дыхания. {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput,  Если пострадавший находится в душном, плохо проветренном помещении,.. {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, откройте окно, включите вентилятор или вынесите потерявшего сознание на воздух.{ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, Протрите лицо и шею прохладной водой {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, Похлопайте по щекам и если возможно, дайте пострадавшему понюхать ватку,.. {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, смоченную нашатырным спиртом. {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, На этом лекция окончена,слушаю ваши вопросы. {ENTER}
+Return
+
+!8::
+SendMessage, 0x50,, 0x4190419,, A 
+SendInput, {t} 
+Sleep 750 ;
+SendInput, Здравствуйте, я прочту Вам лекцию на тему "Первая помощь при ДТП".   {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput,  Оказывая первую помощь, необходимо действовать по правилам. {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput,   Немедленно определить характер и источник травмы. {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput,  Наиболее частые травмы в случае ДТП - сочетание повреждений черепа.. {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, и нижних конечностей и грудной клетки.  {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, Необходимо извлечь пострадавшего из автомобиля, осмотреть его.  {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput,  Далее следует оказать первую помощь... {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, в соответствии с выявленными травмами.  {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput,  И перенести пострадавшего в безопасное место,.. {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput,  укрыть от холода,зноя или дождя и вызвать врача. {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, Организовать транспортировку пострадавшего в лечебное учреждение. {ENTER}
+SendInput, {t} 
+Sleep 750 ;
+SendInput, На этом лекция окончена,слушаю ваши вопросы. {ENTER}
+Return
+
+!Numpad3::
+SendMessage, 0x50,, 0x4190419,, A 
+SendInput, {t} 
+Sleep 950 ;
+SendInput,Сегодня я проведу лекцию на тему "Работа с устройством КПК"  {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, После того как вы остановили гражданина, представились, проверили его документы... {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, ...вам нужно внести его автомобильный номер в устройство  {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, /b используем команды /findcar и /skan  {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, После этого мы получим информацию о штрафах, вин-номере авто... {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, ...сведения о регистрации т.с., участиях в ДТП и многое другое {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, Если вы видите что у человека штрафов на сумму 50.000 рублей и более -... {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, ...вы обязаны лишить его прав за статью 20.25 КоАП {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, Так же КПК используется для дистанционного лишения прав. {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, /b используется команда /takecarlic  {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, /b должна соблюдаться полная отыгровка КПК {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, Но представим ситуацию - авто незарегестрированно. В таком случае... {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, ...вы берете КПК и наводите его на лицо подозреваемого {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, После ищете его в базе, а так же штрафуете за 12.1.1 КоАП {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, /b незарегистрированно - нет номеров (пустая рамка) {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, На этом лекция окончена,слушаю ваши вопросы. {ENTER}
+Return
+
+!Numpad4::
+SendMessage, 0x50,, 0x4190419,, A 
+SendInput, {t} 
+Sleep 950 ;
+SendInput, Сегодня я проведу лекцию на тему "Использование табельного оружия" {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, Начну с того, что табельное оружие - это важная часть экипировки сотрудника полиции. {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, Надо запомнить, что с табельным оружием надо обращаться с огромной осторожностью. {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, /b Запрещено доставать пистолет, если не отыграли РП команду {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, /b Бинды num_1 и num_2 достать и убрать соответсвенно {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, Использование оружия в личных целях строго запрещено!  {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, Использование оружия разрешено только при ЧС и тренировках. {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, Использовать его, если вам, вашему коллеге или же гражданину угрожает опасность. {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, Надо стараться не использовать оружие в людных местах... {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, если даже есть крайняя необходимость, ведь из-за это могут пострадать невинные люди. {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, Важно то, что правильное использование оружия может спасти кому-то жизнь. {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, Поэтому табельное оружия всегда должно быть исправно. {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, В каждом пистолете 40 патрон,по 7 в обойме. {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, Если закончились боеприпасы, нужно добраться до ГУВД и взять боеприпасы. {ENTER}
+SendInput, {t} 
+Sleep 950 ;
+SendInput, Если оружие повредилось, надо заменить его или же починить его. {ENTER}
+SendInput, На этом лекция окончена,слушаю ваши вопросы. {ENTER}
+Return
+
+!9::
+SendMessage, 0x50,, 0x4190419,, A
+SendInput, {t} 
+sleep 650
+SendInput, /ro Требуется помощь в поимки ООП,по Базе данных:{Space}
+Return
+
+!insert::
+SendMessage, 0x50,, 0x4190419,, A 
+SendInput, {е} 
+Sleep 100 ; 
+SendInput, /do Кнопка "SOS" вшита в воротник рубашки.{ENTER}
+Sleep 100 ;
+SendInput, {е} 
+Sleep 100 ; 
+SendInput, /me резким движением правой руки нажал на кнопку "SOS"{enter} 
+Sleep 100 ; 
+SendInput, {е}
+Sleep 100 ;
+SendInput, /do Кнопка "SOS" нажата.{ENTER}
+Sleep 100 ;
+Return
+
+
+
+
+
+
